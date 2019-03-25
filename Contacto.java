@@ -1,4 +1,6 @@
+import java.util.*;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Contacto extends Persona {
     private String email;
@@ -27,7 +29,9 @@ public void set(String phone) {
 }
 
 public void addContact(Contacto contacto){
-    List<String> agendaContact = new List<String>();
+    ArrayList<String> agendaContact = new ArrayList<String>();
+    Scanner tec = new Scanner();
+
 }
 public void searchContact(Contacto contacto){
 
