@@ -1,4 +1,6 @@
-public class Contacto extends Persona{
+import java.util.List;
+
+public class Contacto extends Persona {
     private String email;
     private String phone;
 
@@ -25,7 +27,7 @@ public void set(String phone) {
 }
 
 public void addContact(Contacto contacto){
-
+    List<String> agendaContact = new List<String>();
 }
 public void searchContact(Contacto contacto){
 
