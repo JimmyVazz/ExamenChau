@@ -48,8 +48,7 @@ public class Menu {
         opcionesMenu.add("2) Eliminar contacto");
         opcionesMenu.add("3) Mostrar contactos");
         opcionesMenu.add("4) Buscar contacto");
-        opcionesMenu.add("5) Eliminar contacto");
-        opcionesMenu.add("6) Salir");
+        opcionesMenu.add("5) Salir");
         opcionesMenu.add("Opcion");
         
     }

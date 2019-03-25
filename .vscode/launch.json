@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Examen",
+            "request": "launch",
+            "mainClass": "Examen",
+            "projectName": "Examen Papa chau_4296c8c7"
+        }
+    ]
+}
