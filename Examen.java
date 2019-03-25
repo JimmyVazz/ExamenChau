@@ -2,7 +2,7 @@ class Examen {
     public static void main(String[] args) {
         int opcion = 0;
         Menu menu  = new Menu();
-        Power power  = null;
+        Persona power  = null;
         do{
             opcion = menu.askInConsole();
             switch(opcion) {
@@ -26,6 +26,6 @@ class Examen {
 
         }while(opcion!=5);
 
-
+//PUTOCHAAAVEZZZ
     }
 }
