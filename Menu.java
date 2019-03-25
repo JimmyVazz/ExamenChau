@@ -1,4 +1,3 @@
-package utilerias;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -44,12 +43,13 @@ public class Menu {
     }
 
     private void init() {
-        opcionesMenu.add(") Elige un personaje");
-        opcionesMenu.add("1) Elegir a Superman");
-        opcionesMenu.add("2) Elegir a Canario");
-        opcionesMenu.add("2) Elegir a Sirenoman");
-        opcionesMenu.add("4) Desplegar poder");
-        opcionesMenu.add("5) Salir");
+        opcionesMenu.add(") Elige una opcion");
+        opcionesMenu.add("1) Agregar contacto");
+        opcionesMenu.add("2) Eliminar contacto");
+        opcionesMenu.add("3) Mostrar contactos");
+        opcionesMenu.add("4) Buscar contacto");
+        opcionesMenu.add("5) Eliminar contacto");
+        opcionesMenu.add("6) Salir");
         opcionesMenu.add("Opcion");
         
     }
