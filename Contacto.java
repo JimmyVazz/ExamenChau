@@ -30,7 +30,7 @@ public void setPhone(String phone) {
 
 public void addContact(Contacto contacto){
     String tecladito;
-    ArrayList<String> agendaContact = new ArrayList<String>();
+    ArrayList<Contacto> agendaContact = new ArrayList<Contacto>();
     Scanner tec = new Scanner(System.in);
     System.out.println("Ingresa nombre:");
     tecladito = tec.nextLine();
@@ -64,13 +64,14 @@ public void deleteContact(Contacto c){
 
 @Override
 public String toString(){
-    return super.toString() + "Email: "+email+" Telefono: "+phone;
+    return super.toString() + " Email: "+email+" Telefono: "+phone;
     
 }
 
 private String testPhone(String phone) {
     for(int i=0;i<phone.length();i++) {
-        if( (phone.charAt(i)>= 48 && phone.charAt(i)<=47) && phone.length() == 10) {
+        if( phone.length() == 10) {
+
         } else {
             return "";
                

@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /* Universidad Autonoma del Estado de México
 Carlos Jimmy Vasquez Fuentes   51%
 Jose Luis Ruiz Chavez          49%
@@ -7,13 +9,19 @@ Examen del Primer Parcial
 */
 public class Main {
     public static void main(String[] args) {
-        
-    } {
         int opcion = 0;
-        Menu menu  = new Menu();
         Contacto contact  = new Contacto();
+        Scanner tec = new Scanner(System.in);
         do{
-            opcion = menu.askInConsole();
+            System.out.println("Elige una opcion");
+            System.out.println(") Elige una opcion");
+            System.out.println("1) Agregar contacto");
+            System.out.println("2) Eliminar contacto");
+            System.out.println("3) Mostrar contactos");
+            System.out.println("4) Buscar contacto");
+            System.out.println("5) Salir");
+            System.out.println("Opcion");
+            opcion = tec.nextInt();
             switch(opcion) {
                 case 1:
                     contact.addContact(contact);
@@ -37,4 +45,5 @@ public class Main {
 
 
     }
+    
 }
