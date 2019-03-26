@@ -18,6 +18,7 @@ public String getMaterno(){
 
 public void setNombre(String nombre) {
     nombre = testCadena(nombre);
+    
     this.nombre = nombre;
 }
 public void setPaterno(String paterno) {

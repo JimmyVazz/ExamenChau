@@ -34,27 +34,28 @@ public void addContact(Contacto contacto, ArrayList<Contacto> agendaContact){
     Scanner tec = new Scanner(System.in);
     System.out.println("Ingresa nombre:");
     tecladito = tec.nextLine();
-    contacto.searchContact(tecladito);
-    contacto.setNombre(tecladito);
-    System.out.println("Ingresa apellido paterno: ");
-    tecladito = tec.nextLine();
-    contacto.setPaterno(tecladito);
-    System.out.println("Ingresa apellido materno: ");
-    tecladito = tec.nextLine();
-    contacto.setMaterno(tecladito);
-    System.out.println("Ingresa correo electronico:");
-    tecladito = tec.nextLine();
-    contacto.setEmail(tecladito);
-    System.out.println("Ingresa numero telefonico: ");
-    tecladito = tec.nextLine();
-    contacto.setPhone(tecladito);
-
-    agendaContact.add(contacto);
     
-
-
+    if(contacto.checkContact(tecladito, agendaContact) == ){
+        contacto.setNombre(tecladito);
+        System.out.println("Ingresa apellido paterno: ");
+        tecladito = tec.nextLine();
+        contacto.setPaterno(tecladito);
+        System.out.println("Ingresa apellido materno: ");
+        tecladito = tec.nextLine();
+        contacto.setMaterno(tecladito);
+        System.out.println("Ingresa correo electronico:");
+        tecladito = tec.nextLine();
+        contacto.setEmail(tecladito);
+        System.out.println("Ingresa numero telefonico: ");
+        tecladito = tec.nextLine();
+        contacto.setPhone(tecladito);
+    
+        agendaContact.add(contacto);
+    }else{
+        System.out.println("El contacto esta repetido");
+        }
 }
-public int searchContact(Contacto contacto, ArrayList<Contacto> agendaContact){
+public void searchContact(Contacto contacto, ArrayList<Contacto> agendaContact){
     String tecladito;
     
     int existe = 0;
@@ -63,12 +64,11 @@ public int searchContact(Contacto contacto, ArrayList<Contacto> agendaContact){
     tecladito = tec.nextLine();
     for (Persona obj : agendaContact) {
         if(obj.getNombre() == tecladito){
-            System.out.println("Ese contacto esta agregado");
-            existe++;
+            System.out.println(obj);
         }
         
       }
-      return existe;
+     
 }
 public void showContacts(Contacto contacto, ArrayList<Contacto> agendaContact){
 //System.out.println(contacto);
@@ -81,6 +81,19 @@ public void deleteContact(Contacto contacto, ArrayList<Contacto> agendaContact){
     Scanner tec = new Scanner(System.in);
     System.out.println("¿Que contacto quieres eliminar?. Escribe Nombre: ");
     tecladito = tec.nextLine();
+
+
+}
+
+public int checkContact(String nombre, ArrayList<Contacto> agendaContact){
+    int existe = 0;
+    for (Persona obj : agendaContact) {
+        if(obj.getNombre() == nombre){
+            existe++;
+        }
+        
+      }
+      return existe;
 }
 
 @Override
