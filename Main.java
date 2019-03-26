@@ -26,16 +26,16 @@ public class Main {
             opcion = tec.nextInt();
             switch(opcion) {
                 case 1:
-                    contact.addContact(contact, );
+                    contact.addContact(contact, agendaContact);
                     break;
                 case 2:
-                    contact.deleteContact(contact);
+                    contact.deleteContact(contact, agendaContact);
                     break;
                 case 3:
-                    contact.showContacts(contact);
+                    contact.showContacts(contact, agendaContact);
                     break;
                 case 4:
-                    contact.searchContact(contact);
+                    contact.searchContact(contact, agendaContact);
                     break;
                 case 5:
                     System.out.println("Bai alv!");

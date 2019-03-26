@@ -34,6 +34,7 @@ public void addContact(Contacto contacto, ArrayList<Contacto> agendaContact){
     Scanner tec = new Scanner(System.in);
     System.out.println("Ingresa nombre:");
     tecladito = tec.nextLine();
+    contacto.searchContact(tecladito);
     contacto.setNombre(tecladito);
     System.out.println("Ingresa apellido paterno: ");
     tecladito = tec.nextLine();
@@ -53,17 +54,33 @@ public void addContact(Contacto contacto, ArrayList<Contacto> agendaContact){
 
 
 }
-public void searchContact(Contacto contacto){
+public int searchContact(Contacto contacto, ArrayList<Contacto> agendaContact){
     String tecladito;
+    
+    int existe = 0;
     Scanner tec = new Scanner(System.in);
+    System.out.println("¿Que contacto quieres buscar? Nombre: ");
+    tecladito = tec.nextLine();
+    for (Persona obj : agendaContact) {
+        if(obj.getNombre() == tecladito){
+            System.out.println("Ese contacto esta agregado");
+            existe++;
+        }
+        
+      }
+      return existe;
 }
 public void showContacts(Contacto contacto, ArrayList<Contacto> agendaContact){
 //System.out.println(contacto);
-
+for (Persona obj : agendaContact) {
+    System.out.println(obj);
+  }
 }
 public void deleteContact(Contacto contacto, ArrayList<Contacto> agendaContact){
     String tecladito;
     Scanner tec = new Scanner(System.in);
+    System.out.println("¿Que contacto quieres eliminar?. Escribe Nombre: ");
+    tecladito = tec.nextLine();
 }
 
 @Override
