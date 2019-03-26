@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /* Universidad Autonoma del Estado de México
@@ -12,6 +13,7 @@ public class Main {
         int opcion = 0;
         Contacto contact  = new Contacto();
         Scanner tec = new Scanner(System.in);
+        ArrayList<Contacto> agendaContact = new ArrayList<Contacto>();
         do{
             System.out.println("Elige una opcion");
             System.out.println(") Elige una opcion");
@@ -24,7 +26,7 @@ public class Main {
             opcion = tec.nextInt();
             switch(opcion) {
                 case 1:
-                    contact.addContact(contact);
+                    contact.addContact(contact, );
                     break;
                 case 2:
                     contact.deleteContact(contact);

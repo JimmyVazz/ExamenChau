@@ -28,9 +28,9 @@ public void setPhone(String phone) {
     }
 }
 
-public void addContact(Contacto contacto){
+public void addContact(Contacto contacto, ArrayList<Contacto> agendaContact){
     String tecladito;
-    ArrayList<Contacto> agendaContact = new ArrayList<Contacto>();
+
     Scanner tec = new Scanner(System.in);
     System.out.println("Ingresa nombre:");
     tecladito = tec.nextLine();
@@ -47,19 +47,23 @@ public void addContact(Contacto contacto){
     System.out.println("Ingresa numero telefonico: ");
     tecladito = tec.nextLine();
     contacto.setPhone(tecladito);
+
+    agendaContact.add(contacto);
     
 
 
 }
 public void searchContact(Contacto contacto){
-
+    String tecladito;
+    Scanner tec = new Scanner(System.in);
 }
-public void showContacts(Contacto contacto){
-System.out.println(contacto);
+public void showContacts(Contacto contacto, ArrayList<Contacto> agendaContact){
+//System.out.println(contacto);
 
 }
 public void deleteContact(Contacto c){
-    
+    String tecladito;
+    Scanner tec = new Scanner(System.in);
 }
 
 @Override
