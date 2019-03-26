@@ -65,6 +65,8 @@ public void searchContact(Contacto contacto, ArrayList<Contacto> agendaContact){
     for (Persona obj : agendaContact) {
         if(obj.getNombre() == tecladito){
             System.out.println(obj);
+        }else{
+            System.out.println("No existe\n");
         }
         
       }
