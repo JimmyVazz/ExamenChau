@@ -35,7 +35,7 @@ public void addContact(Contacto contacto, ArrayList<Contacto> agendaContact){
     System.out.println("Ingresa nombre:");
     tecladito = tec.nextLine();
     
-    if(contacto.checkContact(tecladito, agendaContact) == ){
+    if(contacto.checkContact(tecladito, agendaContact) == 0){
         contacto.setNombre(tecladito);
         System.out.println("Ingresa apellido paterno: ");
         tecladito = tec.nextLine();
@@ -81,8 +81,12 @@ public void deleteContact(Contacto contacto, ArrayList<Contacto> agendaContact){
     Scanner tec = new Scanner(System.in);
     System.out.println("¿Que contacto quieres eliminar?. Escribe Nombre: ");
     tecladito = tec.nextLine();
-
-
+    for (Persona obj : agendaContact) {
+        if(obj.getNombre() == tecladito){
+            agendaContact.remove(obj);
+        }
+        
+      }
 }
 
 public int checkContact(String nombre, ArrayList<Contacto> agendaContact){
