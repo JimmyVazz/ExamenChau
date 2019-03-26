@@ -61,7 +61,7 @@ public void showContacts(Contacto contacto, ArrayList<Contacto> agendaContact){
 //System.out.println(contacto);
 
 }
-public void deleteContact(Contacto c){
+public void deleteContact(Contacto contacto, ArrayList<Contacto> agendaContact){
     String tecladito;
     Scanner tec = new Scanner(System.in);
 }
